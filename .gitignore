@@ -1,0 +1,10 @@
+RunCollatz
+TestCollatz
+gmon.*
+*.gcda
+*.gcno
+*.tmp
+*.swp
+*.nfs
+Doxyfile
+/collatz-tests
