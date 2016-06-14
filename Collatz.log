@@ -1,3 +1,9 @@
+commit cf61679392c0edac8d433358238c191496b50b7c
+Author: Darya Mylius <daryam@cs.utexas.edu>
+Date:   Tue Jun 14 16:09:57 2016 -0500
+
+    recommitting after running make test
+
 commit 7f154f83de1a64f23995b5cb854ff1125f136cb6
 Author: Darya Mylius <daryam@cs.utexas.edu>
 Date:   Tue Jun 14 16:04:31 2016 -0500
