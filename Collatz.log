@@ -1,3 +1,9 @@
+commit 4c463b82c48a528b8dcbdfd2b9ce5768a0f0e19b
+Author: Darya Mylius <daryam@cs.utexas.edu>
+Date:   Wed Jun 15 12:07:39 2016 -0500
+
+     simplest implementation done close #8
+
 commit 753606eed5a1a8c68f03ad4b625e93dbee4f1cc9
 Author: Darya Mylius <daryam@cs.utexas.edu>
 Date:   Tue Jun 14 16:16:51 2016 -0500
