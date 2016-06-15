@@ -1,3 +1,15 @@
+commit a7bee1852e1a7c5a2df58c6d28fd66ba99324ae3
+Author: Darya Mylius <daryam@cs.utexas.edu>
+Date:   Wed Jun 15 18:46:12 2016 -0500
+
+    correctly tagged code so that it has two diff possible executions close #14
+
+commit a0eb8407125b0c07ddb7e29b92c51c5584e46249
+Author: Darya Mylius <daryam@cs.utexas.edu>
+Date:   Wed Jun 15 18:27:35 2016 -0500
+
+    cache working close #13
+
 commit adabd0a08af745590a7badd9e426f1b2f8d7e2cd
 Author: Darya Mylius <daryam@cs.utexas.edu>
 Date:   Wed Jun 15 12:37:10 2016 -0500
