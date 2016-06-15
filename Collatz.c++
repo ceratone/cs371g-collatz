@@ -13,9 +13,12 @@
 
 #include "Collatz.h"
 
-const int CACHE_SIZE = 250000;
+
 using namespace std;
+#define CACHE_SIZE 250000  //Comment out this section to use the simple solution (uncached)
+#ifdef CACHE_SIZE
 int values[CACHE_SIZE];
+#endif
 
 // ------------
 // collatz_read
@@ -44,7 +47,7 @@ int collatz_eval (int start, int end) {
     int orig_start = start;
     int orig_end = end;
    
-    /*Simplest implementation 
+#ifndef CACHE_SIZE 
     for(int diff = start; diff <= end; diff++) {
         int curr_length = 1;
         int num = diff;
@@ -57,11 +60,13 @@ int collatz_eval (int start, int end) {
         }
         if (curr_length > max_cycle_length)
             max_cycle_length = curr_length;
-    }*/
+    }
+#endif
     
     //We know that any given number n has mcl of mcl(n/2) + 1, so we will exploit this fact
     //Optimized implementation
     //This was so much easier in Python, lol.
+#ifdef CACHE_SIZE
     int begin = start;
     if(start < (end/2))
         begin = end/2;
@@ -83,7 +88,7 @@ int collatz_eval (int start, int end) {
         if(curr_length > max_cycle_length)
             max_cycle_length = curr_length;
     }
-
+#endif
     assert(start = orig_start);    //post-condition: start/end values not changed by method execution
     assert(end = orig_end);
     assert(max_cycle_length > 0);    //post-condition: max_cycle_length started as 1 and cannot be less than
