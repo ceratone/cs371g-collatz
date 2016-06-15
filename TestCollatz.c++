@@ -106,13 +106,13 @@ TEST(CollatzFixture, solve_2) {
     istringstream r("1 1\n4422 4025\n2059 565\n2534 8497\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("1 1 1\n422 4025 215\n2059 565 182\n2534 8497 262\n", w.str());}
+    ASSERT_EQ("1 1 1\n4422 4025 215\n2059 565 182\n2534 8497 262\n", w.str());}
 
 TEST(CollatzFixture, solve_3) {
-    istringstream r("66622 712507\n55703 776549\n9247 38933\n7244 3234\n");
+    istringstream r("365866 483598\n261646 382005\n870 14089\n359522 54283\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("66622 712507 509\n55703 776549 509\n9247 38933 324\n7244 3234 262\n", w.str());}
+    ASSERT_EQ("365866 483598 449\n261646 382005 441\n870 14089 276\n359522 54283 443\n", w.str());}
 
 
 
