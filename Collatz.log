@@ -1,3 +1,9 @@
+commit 162a14d761291bde6a174c7e244708a22c5775ee
+Author: Darya Mylius <daryam@cs.utexas.edu>
+Date:   Wed Jun 15 12:26:13 2016 -0500
+
+    tests pass and unit/acc tests done fix #6 #7 #11
+
 commit 4c463b82c48a528b8dcbdfd2b9ce5768a0f0e19b
 Author: Darya Mylius <daryam@cs.utexas.edu>
 Date:   Wed Jun 15 12:07:39 2016 -0500
