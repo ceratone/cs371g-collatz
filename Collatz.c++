@@ -13,7 +13,9 @@
 
 #include "Collatz.h"
 
+const int CACHE_SIZE = 250000;
 using namespace std;
+int values[CACHE_SIZE];
 
 // ------------
 // collatz_read
@@ -41,21 +43,47 @@ int collatz_eval (int start, int end) {
     }
     int orig_start = start;
     int orig_end = end;
-    
+   
+    /*Simplest implementation 
     for(int diff = start; diff <= end; diff++) {
         int curr_length = 1;
         int num = diff;
-            while (num > 1){
-                if ((num % 2) == 1)
-                    num = (3 * num) + 1;
-                else
-                    num = num/2;
-                curr_length++;
-            }
-            if (curr_length > max_cycle_length)
-                max_cycle_length = curr_length;
-    }
+        while (num > 1){
+            if ((num % 2) == 1)
+                num = (3 * num) + 1;
+            else
+                num = num/2;
+            curr_length++;
+        }
+        if (curr_length > max_cycle_length)
+            max_cycle_length = curr_length;
+    }*/
     
+    //We know that any given number n has mcl of mcl(n/2) + 1, so we will exploit this fact
+    //Optimized implementation
+    //This was so much easier in Python, lol.
+    int begin = start;
+    if(start < (end/2))
+        begin = end/2;
+    for(int diff = begin; diff <= end; diff++){
+        int curr_length = 1;
+        int num = diff;
+        while(num > 1){
+            //Check for existing variable in cache FIRST to save time
+            if((num < CACHE_SIZE) && (values[num] > 0)){
+                curr_length += values[num] - 1; // Subtract 1 because of curr_length
+                break;
+            }
+            else if((num%2) == 1)
+                num = (3 * num) + 1;
+            else
+                num = num / 2;
+            curr_length++;
+        }
+        if(curr_length > max_cycle_length)
+            max_cycle_length = curr_length;
+    }
+
     assert(start = orig_start);    //post-condition: start/end values not changed by method execution
     assert(end = orig_end);
     assert(max_cycle_length > 0);    //post-condition: max_cycle_length started as 1 and cannot be less than
