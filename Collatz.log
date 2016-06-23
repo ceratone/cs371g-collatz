@@ -1,3 +1,9 @@
+commit a9287ef8ec3de7efc9e9e5a70dc10a99e89f8964
+Author: Darya Mylius <daryam@cs.utexas.edu>
+Date:   Wed Jun 15 18:50:36 2016 -0500
+
+    ran make test: valgrind, gprof, doxygen, created .log file
+
 commit a7bee1852e1a7c5a2df58c6d28fd66ba99324ae3
 Author: Darya Mylius <daryam@cs.utexas.edu>
 Date:   Wed Jun 15 18:46:12 2016 -0500
